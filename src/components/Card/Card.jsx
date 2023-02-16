@@ -1,8 +1,11 @@
-export const Card = ({ href, imgAlt, imgSrc }) => (
-  <a href={href}>
-    <img src={imgSrc} alt={imgAlt} />
-    <div style={{ padding: "1rem" }}>
-      <div style={{ fontWeight: "bold", fontSize: "1.25rem" }}>{imgAlt}</div>
+import React from "react";
+
+export default function Card({ href, imgAlt, imgSrc }) {
+  return (
+    <div>
+      <a href={href}>
+        <img src={imgSrc} alt={imgAlt} />
+      </a>
     </div>
-  </a>
-);
+  );
+}

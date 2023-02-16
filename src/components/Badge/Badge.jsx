@@ -1,12 +1,17 @@
-export const Badge = ({ color, size, icon }) => (
-  <span
-    style={{
-      backgroundColor: color,
-      fontSize: size,
-      borderRadius: "50%",
-      padding: ".25rem",
-    }}
-  >
-    <i className={`${icon}`} />
-  </span>
-);
+const styles = {
+  color: {
+    primary: "bg-sky-300 hover:bg-blue-600",
+    delete: "bg-red-500 hover:bg-red-600",
+    gray: "bg-gray-500 hover:bg-gray-600",
+  },
+  size: {
+    small: "text-sm px-4 py-2",
+    large: "text-lg px-6 py-3",
+  },
+};
+export default function Badge(props) {
+  const { color, size, icon } = props;
+  const colorClass = styles.color[color];
+  const sizeClass = styles.size[size];
+  return <div className={`rounded-lg ${colorClass} ${sizeClass}`}>{icon}</div>;
+}
