@@ -6,6 +6,7 @@ const Button = ({ size, color, disabled, children, onClick }) => {
       small: "px-3 py-6 text-sm",
       medium: "px-4 py-8 text-base",
       large: "px-5 py-9 text-lg",
+      xl: "px-5 py-9 text-lg",
     },
     color: {
       primary: "bg-red-500",
